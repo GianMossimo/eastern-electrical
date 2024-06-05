@@ -286,8 +286,9 @@ nav ul li.active {
     fill: #FA0F00;
 }
 
-/** For tablet devices **/
+/* For tablet devices */
 @media (min-width: 768px) and (max-width: 1023px) {
+
     .ee__about-bottom_container-svg svg {
         width: calc(100% + 1.3px);
         height: 70px;
@@ -385,31 +386,37 @@ nav ul li.active {
 }
 
 @keyframes blob {
+
     0%, 100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
     50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
+
 }
 
 @keyframes blob2 {
+
     0%, 100% {
         border-radius: 60% 30% 70% 40% / 40% 60% 30% 60%;
     }
     50% {
         border-radius: 50% 60% 30% 60% / 40% 60% 70% 40%;
     }
+
 }
 
 /* Media Queries for Meet the Team */
 @media screen and (max-width: 1550px) {
+
     .ee__about-team_container {
         width: 80%;
     }
 }
 
 @media screen and (max-width: 1160px) {
+
     .ee__about-team_container {
         width: 90%;
     }
@@ -525,6 +532,309 @@ nav ul li.active {
     fill: #F5F5F5;
 }
 
+/* Wave for Bottom of Services */
+.ee__services-bottom_container {
+    margin-top: -0.1rem;
+}
+
+.ee__services-bottom_container-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.ee__services-bottom_container-svg svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 78px;
+    transform: rotateY(180deg);
+}
+
+.ee__services-bottom_container-svg .shape-fill {
+    fill: #003F88;
+}
+
+/* For tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .ee__services-bottom_container-svg svg {
+        width: calc(100% + 1.3px);
+        height: 70px;
+    }
+}
+
+/* Media Queries for About Us */
+@media screen and (max-width: 800px) {
+    
+    .ee__about-container-text {
+        width: 80%;
+    }
+
+}
+
+/* Styling for Careers Page */
+.ee__careers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    line-height: 2rem;
+}
+
+.ee__careers-header {
+    margin-top: -10rem;
+}
+
+.ee__careers-header h2 {
+    font-size: 3rem;
+
+    margin-bottom: 6rem;
+}
+
+.ee__careers-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-two);
+    font-weight: bold;
+
+    width: 60%;
+}
+
+.ee__careers-form input {
+    padding: 1rem;
+    margin: 1rem;
+
+    border-radius: 10px;
+    border: solid 1px #000;
+
+    text-align: center;
+}
+
+.ee_careers-form_name,
+.ee__careers-form-address {
+    display: flex;
+    flex-direction: column;
+}
+
+.ee__careers-form-address2 {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.ee__careers-form-address2 select {
+    height: 2.5rem;
+    width: 15%;
+
+    margin-left: 1rem;
+}
+
+.ee__careers-form-address2 input {
+    font-family: var(--font-two);
+    font-weight: bold;
+
+    width: 40%;
+    border-radius: 10px;
+}
+
+.ee__careers-form_resume {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1rem;
+}
+
+.ee__careers-form_resume input {
+    border: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+}
+
+/* Styling the File Button */
+.file-input {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1rem;
+
+    cursor: pointer;
+
+    background-color: #003F88;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for Message Container */
+.ee__careers-form_message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1rem;
+}
+
+.ee__careers-form_message textarea {
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    border: solid 1px #000;
+
+    padding: 1rem;
+
+    font-family: var(--font-two);
+}
+
+.ee__careers-form_submit button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1rem;
+
+    cursor: pointer;
+
+    background-color: #003F88;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+
+    transition: background-color 0.3s;
+}
+
+.ee__careers-form_submit button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Form */
+@media screen and (max-width: 950px) {
+
+    .ee__careers-form {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .ee__careers-header h2 {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .ee__careers-form {
+        width: 100%;
+    }
+
+    .ee__careers-form_contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ee__careers-header h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/* Footer */
+.ee__footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #FA0F00;
+    color: #F5F5F5;
+
+    line-height: 2.5rem;
+}
+
+.ee__footer-container_svg {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.ee__footer-container_svg svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 180px;
+}
+
+.ee__footer-container_svg .shape-fill {
+    fill: #FA0F00;
+}
+
+.ee__footer-container_text {
+    font-size: 1.4rem;
+
+    width: 60%;
+
+    margin: 5rem;
+}
+
+/* Footer Icons Styling */
+.ee__footer-container_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ee__footer-container_icons i {
+    font-size: 5rem;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.ee__footer-container_icons a {
+    text-decoration: none;
+    color: #F5F5F5;
+
+    margin: 1rem 3rem 6rem;
+}
+
+.ee__footer-container_icons i:hover {
+    transform: translateY(-10px);
+}
+
 /* For Sections */
 section {
     position: relative;
@@ -533,30 +843,4 @@ section {
     align-items: center;
     min-height: 400px;
     width: 100%;
-}
-
-/* For Wavy Svg */
-.spacer {
-    aspect-ratio: 900/600;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.layer1 {
-    background-image: url('./layer1.svg');
-}
-
-/* For Bubble Svg */
-.bubble {
-    aspect-ratio: 900/900;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.layer2 {
-    background-image: url('/bubble.svg');
 }
