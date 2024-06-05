@@ -475,7 +475,7 @@ nav ul li.active {
 @media screen and (max-width: 450px) {
 
     .ee__about-team h2 {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 
     .ee__about-team_container-member_text {
