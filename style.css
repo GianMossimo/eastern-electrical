@@ -44,8 +44,13 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--font-family);
+}
+
+h4 {
+    font-size: 1.7rem;
 }
 
 p {
@@ -257,6 +262,14 @@ nav ul li.active {
     font-size: 3rem;
 
     margin: 2rem;
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ee__about-container-text p {
+    font-size: 1.5rem;
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* About Us Section Curve */
@@ -304,6 +317,175 @@ nav ul li.active {
 
 }
 
+/* Services Section */
+.ee__services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #003F88;
+    color: #F5F5F5;
+
+    width: 100%;
+}
+
+.ee__services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    line-height: 3.5rem;
+
+    width: 80%;
+}
+
+.ee__services-container h2 {
+    font-size: 3rem;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ee__services-container h3 {
+    font-size: 2.5rem;
+
+    color: #FB0;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ee__services-container p {
+    font-size: 1.5rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* For Rotating Words */
+.ee__service-item_wrapper {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+
+    height: 70px;
+    padding: 50px 30px;
+}
+
+.ee__service-item_words {
+    overflow: hidden;
+    height: 70px;
+}
+
+.ee__service-item_words span {
+    display: block;
+    height: 70px;
+    padding-left: 15px;
+
+    font-family: var(--font-two);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+
+    animation: words 12s infinite;
+}
+
+.ee__service-item_words:hover span {
+    animation-play-state: paused;
+
+    cursor: pointer;
+
+    color: lightgray;
+}
+
+@keyframes words {
+    
+    0%, 11.1111% {
+        transform: translateY(0%);
+    }
+
+    12.2222%, 23.3333% {
+        transform: translateY(-100%);
+    }
+
+    24.4444%, 35.5555% {
+        transform: translateY(-200%);
+    }
+
+    36.6666%, 47.7777% {
+        transform: translateY(-300%);
+    }
+
+    48.8888%, 59.9999% {
+        transform: translateY(-400%);
+    }
+
+    61.1111%, 72.2222% {
+        transform: translateY(-500%);
+    }
+
+    73.3333%, 84.4444% {
+        transform: translateY(-600%);
+    }
+
+    85.5555%, 96.6666% {
+        transform: translateY(-700%);
+    }
+
+    97.7777%, 100% {
+        transform: translateY(-800%);
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .ee__service-item_wrapper {
+        flex-direction: column;
+
+    
+        height: 400px;
+    }
+
+    .ee__service-item_words span {
+        font-size: 1.6rem;
+    }
+    
+}
+
+@media (max-width: 600px) {
+
+    .ee__services-container {
+        padding: 0 30px;
+    }
+
+    .ee__services-container p {
+        padding: 0 20px;
+    }
+
+}
+
+/* Services SVG */
+.ee__services-container_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.ee__services-container_svg svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.ee__services-container_svg .shape-fill {
+    fill: #F5F5F5;
+}
+
 /* Meet the Team Section */
 .ee__about-team {
     margin-top: -14rem;
@@ -322,6 +504,28 @@ nav ul li.active {
 
     width: 60%;
     margin: auto;
+}
+
+.ee__about-team_container_CEO {
+    align-items: center;
+    width: 60%;
+
+    background-color: #FA0F00;
+}
+
+.ee__about-team_container-member_CEO img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 24rem ;
+    width: 24rem;
+}
+
+.ee__about-team_container-member_CEO {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .ee__about-team_container-member {
@@ -350,16 +554,24 @@ nav ul li.active {
     text-align: center;
 
     padding: 8rem;
+    width: 100%;
 }
 
 .ee__about-team_container-member_text h3 {
     font-size: 3rem;
+}
+
+.ee__about-team_container-member_text h4 {
     margin: 2rem;
 }
 
 .ee__about-team_container-member_text p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
+
+    line-height: 2.5rem;
+
+    padding: 1rem;
 }
 
 /* Meet the Team Animation */
@@ -499,57 +711,6 @@ nav ul li.active {
         height: 12rem;
     }
 
-}
-
-/* Services Section */
-.ee__services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background: #003F88;
-    color: #F5F5F5;
-}
-
-.ee__services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    line-height: 3.5rem;
-}
-
-.ee__services-container h2 {
-    font-size: 3rem;
-    margin-top: 10rem;
-    margin-bottom: 4rem;
-}
-
-.ee__services-container p {
-    font-size: 1.5rem;
-}
-
-.ee__services-container_svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.ee__services-container_svg svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.ee__services-container_svg .shape-fill {
-    fill: #F5F5F5;
 }
 
 /* Wave for Bottom of Services */
@@ -841,6 +1002,12 @@ nav ul li.active {
     font-size: 3rem;
 
     margin: 2rem;
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ee__footer-container_text p {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer Icons Styling */
@@ -861,6 +1028,8 @@ nav ul li.active {
     color: #F5F5F5;
 
     margin: 1rem 3rem 6rem;
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .ee__footer-container_icons i:hover {
