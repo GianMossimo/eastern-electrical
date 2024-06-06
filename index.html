@@ -126,7 +126,7 @@
         <div class="ee__services-container" >
             <h2>Our Services</h2>
             <div class="ee__services-list">
-                <div class="ee__service-item">
+                <div class="ee__service-list_content">
                     <h3>Service 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
                 </div>
@@ -136,6 +136,14 @@
                 </div>
                 <div class="ee__service-item">
                     <h3>Service 3</h3>
+                    <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                </div>
+                <div class="ee__service-item">
+                    <h3>Service 4</h3>
+                    <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+                <div class="ee__service-item">
+                    <h3>Service 5</h3>
                     <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
                 </div>
             </div>
@@ -158,20 +166,20 @@
         <form class="ee__careers-form">
             <div class="ee_careers-form_name">
                 <label>Name</label>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
             </div>
             <div class="ee__careers-form_contact">
                 <labeL>Phone</labeL>
-                <input type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                <input id="phone-number" type="tel" placeholder="Phone Number" onkeydown="phoneNumberFormatter()" required>
                 <labeL>Email</labeL>
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" required>
             </div>
             <div class="ee__careers-form-address">
                 <labeL>Address</labeL>
-                <input type="text" placeholder="Street Address">
+                <input type="text" placeholder="Street Address" required>
                 <input type="text" placeholder="Address Line 2">
-                <input type="text" placeholder="City">
+                <input type="text" placeholder="City" required>
                 <div class="ee__careers-form-address2">
                     <select class="styled-select">
                         <option></option>
@@ -227,18 +235,16 @@
                         <option value="WI">WI</option>
                         <option value="WY">WY</option>
                     </select>
-                    <input type="text" placeholder="Zip Code">
+                    <input type="text" placeholder="Zip Code" required>
                 </div>
             </div>
             <div class="ee__careers-form_resume">
-                <label for="file-upload" class="custom-file-upload">
-                    Resume/CV
-                </label>
-                <input type="file" id="file-upload" name="resume" accept=".pdf" class="file-input">
+                <label for="file-upload" class="custom-file-upload">Resume/CV</label>
+                <input type="file" id="file-upload" name="resume" accept=".pdf" class="file-input" required>
                 <span id="file-name"></span>
             </div>
             <div class="ee__careers-form_message">
-                <textarea name="message" cols="50" rows="10" placeholder="Message"></textarea>
+                <textarea name="message" cols="50" rows="10" placeholder="Leave us a message!"></textarea required>
             </div>
             <div class="ee__careers-form_submit">
                 <button type="submit">Submit</button>
@@ -306,6 +312,29 @@
             var fileName = this.files[0].name;
             document.getElementById('file-name').textContent = fileName;
         });
+    </script>
+
+    <!-- For formatting Phone Number -->
+    <script>
+        function formatPhoneNumber(value) {
+            if (!value) return value;
+            const phoneNumber =value.replace(/[^\d]/g, '');
+            const phoneNumberLength = phoneNumber.length;
+            if (phoneNumberLength < 4) return phoneNumber;
+            if (phoneNumberLength < 7) {
+                return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+            }
+            return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+                3,
+                6,
+            )}-${phoneNumber.slice(6, 9)}`;
+        }
+
+        function phoneNumberFormatter() {
+            const inputField = document.getElementById('phone-number');
+            const formattedInputValue = formatPhoneNumber(inputField.value);
+            inputField.value = formattedInputValue;
+        }
     </script>
 
 </body>
