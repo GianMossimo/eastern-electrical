@@ -8,6 +8,26 @@
     --color-text: #000;
 }
 
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 0.6rem;
@@ -197,6 +217,20 @@ nav ul li.active {
 
 }
 
+@media screen and (max-width: 400px) {
+
+    nav {
+        width: 28rem;
+    }
+
+    nav ul li {
+        margin: 5px;
+    
+        font-size: 0.8rem;
+    }
+
+}
+
 /* For Header */
 .ee__header-container {
     height: 600px;
@@ -237,6 +271,18 @@ nav ul li.active {
 
 .ee_header-waves_top .shape-fill {
     fill: #FA0F00;
+}
+
+@media screen and (max-width: 800px) {
+
+    .ee__header-container_text h1 {
+        font-size: 4rem;
+    }
+
+    .ee__header-container_text h2 {
+        font-size: 1.5rem;
+    }
+    
 }
 
 /* About Us Section */
@@ -461,10 +507,14 @@ nav ul li.active {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
     
     .ee__service-item h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
+    }
+
+    .ee__service-item h3 {
+        font-size: 1.8rem;
     }
 
 }
@@ -1061,6 +1111,10 @@ nav ul li.active {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+
+    margin-top: -1px;
+
+    vertical-align: bottom;
 }
 
 .ee__footer-container_svg svg {

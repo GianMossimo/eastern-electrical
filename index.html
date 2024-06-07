@@ -6,7 +6,8 @@
     <title>Eastern Electrical Services</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/585633da20.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/585633da20.js" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
 </head>
 <body id="home">
 
@@ -43,7 +44,7 @@
 
     <!-- About us text -->
     <section class="ee__about-container" id="about">
-        <div class="ee__about-container-text">
+        <div class="ee__about-container-text hidden">
             <h2>About Us</h2>
             <p>Eastern Electrical Solutions (previously ED Services) is a rapidly growing, full-service electrical company founded in the wake of the COVID-19 pandemic. Licensed in both North Carolina and Virginia, Eastern Electrical Solutions prides itself on exceptional customer service, a strong business network,  and providing the highest quality electrical services at affordable prices. We are committed to delivering exceptional customer service and building long-lasting relationships with our clients. While we specialize in custom lake homes, if you need electrical repairs, installations, or maintenance, we have the skills and expertise to get the job done right the first time. Contact us today to schedule an appointment with one of our experienced electricians</p>
         </div>
@@ -59,14 +60,14 @@
     </section>
 
     <!-- Meet the Team -->
-    <section>
+    <section class="hidden">
         <div class="ee__about-team">
             <h2>Meet the Team</h2>
         </div>
 
         <div class="ee__about-team_container">
-            <div class="ee__about-team_container-member_CEO">
-                <img src="./assets/headshot2.jpg" alt="Electrician 1" class="blob">
+            <div class="ee__about-team_container-member_CEO hidden">
+                <img src="./assets/headshot2.jpg" alt="ceo" class="blob">
                 <div class="ee__about-team_container-member_text">
                     <h3>Eric Dohnert</h3>
                     <h4>CEO and Master Electrician</h4>
@@ -74,40 +75,40 @@
                 </div>
             </div>
 
-            <div class="ee__about-team_container-member">
-                <img src="./assets/headshot2.jpg" alt="Electrician 1" class="blob2">
+            <div class="ee__about-team_container-member hidden">
+                <img src="./assets/headshot2.jpg" alt="tyler" class="blob2">
                 <div class="ee__about-team_container-member_text">
                     <h3>Eric 'Tyler' Dohnert</h3>
                     <h4>Electrical Apprentice</h4>
                 </div>
             </div>
 
-            <div class="ee__about-team_container-member">
-                <img src="./assets/headshot2.jpg" alt="Electrician 1" class="blob">
+            <div class="ee__about-team_container-member hidden">
+                <img src="./assets/headshot2.jpg" alt="adam" class="blob">
                 <div class="ee__about-team_container-member_text">
                     <h3>Adam Champion</h3>
                     <h4>Electrical Apprentice</h4>
                 </div>
             </div>
 
-            <div class="ee__about-team_container-member">
-                <img src="./assets/headshot2.jpg" alt="Electrician 1" class="blob2">
+            <div class="ee__about-team_container-member hidden">
+                <img src="./assets/headshot2.jpg" alt="alan" class="blob2">
                 <div class="ee__about-team_container-member_text">
                     <h3>Alan Polanco</h3>
                     <h4>Electrical Apprentice</h4>
                 </div>
             </div>
 
-            <div class="ee__about-team_container-member">
-                <img src="./assets/headshot2.jpg" alt="Electrician 1" class="blob">
+            <div class="ee__about-team_container-member hidden">
+                <img src="./assets/headshot2.jpg" alt="meaghan" class="blob">
                 <div class="ee__about-team_container-member_text">
                     <h3>Meaghan Dohnert</h3>
                     <h4>Operations Manager</h4>
                 </div>
             </div>
 
-            <div class="ee__about-team_container-member">
-                <img src="./assets/headshot2.jpg" alt="Electrician 1" class="blob2">
+            <div class="ee__about-team_container-member hidden">
+                <img src="./assets/headshot2.jpg" alt="marlee" class="blob2">
                 <div class="ee__about-team_container-member_text">
                     <h3>Marlee Sykes</h3>
                     <h4>Executive Assistant</h4>
@@ -119,16 +120,16 @@
     </section>
 
     <!-- Services Section -->
-    <section class="ee__services" id="services">
+    <section class="ee__services " id="services">
         <div class="ee__services-container_svg">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
             </svg>
         </div>
-        <div class="ee__services-container" >
+        <div class="ee__services-container hidden" >
             <h2>Our Services</h2>
             <div class="ee__services-list">
-                <div class="ee__service-list_content">
+                <div class="ee__service-list_content hidden">
                     <h3>Generac</h3>
                     <br>
                     <img src="./assets/generac.png">
@@ -137,19 +138,19 @@
                     <p>With a focus on providing reliable backup power solutions, Generac stands out as a leading manufacturer in the industry. From ensuring homes are protected during outages to supporting the uninterrupted operation of businesses and industrial facilities, Generac's diverse range of products caters to various needs with efficiency and effectiveness.</p>
                 </div>
                 <br>
-                <div class="ee__service-item">
+                <div class="ee__service-item  hidden">
                     <h3>Generator Purchase and Hookup</h3>
                     <br>
                     <p>Our selection includes highly dependable, long-lasting, efficient, and eco-conscious generators and power systems. Since power outages can occur unexpectedly, the best defense is preparedness. Generators offer a proactive solution to safeguard against emergency disruptions.</p>
                 </div>
                 <br>
-                <div class="ee__service-item">
+                <div class="ee__service-item  hidden">
                     <h3>Generator Servicing - Coming Soon!</h3>
                     <br>
                     <p>Regardless of whether it's your residence, workplace, commercial establishment, or industrial facility relying on a Generac backup generator, regular annual servicing is essential. This includes tasks such as oil and filter changes, fuel and voltage checks, as well as overall maintenance to ensure optimal performance. Given the recurring ice storms, strong winds, and heavy rain experienced in North Carolina and Virginia each year, power outages lasting hours or even days are not uncommon. Failing to maintain your backup generator adequately could leave you without crucial amenities like heating, cooling, refrigeration, and lighting during critical times.</p>
                 </div>
                 <br>
-                <div class="ee__service-item">
+                <div class="ee__service-item  hidden">
                     <h2>Residential</h2>
                     <h3>Zap Safe Inspections</h3>
                     <br>
@@ -162,7 +163,7 @@
                     <br>
                 </div>
                 <br>
-                <div class="ee__service-item_wrapper">
+                <div class="ee__service-item_wrapper  hidden">
                     <h3>Complete Wiring Of:</h3>
                     <br>
                     <div class="ee__service-item_words">
@@ -178,7 +179,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="ee__service-item_pool">
+                <div class="ee__service-item_pool  hidden">
                     <h3>Pool and Hot Tub Set Up</h3>
                     <img src="./assets/pool-img.jpg" />
                 </div>
@@ -195,7 +196,7 @@
                     <p>Meters</p>
                     <p>Panels</p>
                 </div>
-                <div class="ee__service-item">
+                <div class="ee__service-item  hidden">
                     <h2>Commercial/Industrial</h2>
                     <h3>Small business fit-ups</h3>
                     <br>
@@ -223,7 +224,7 @@
     </section>
 
     <section class="ee__careers">
-        <div class="ee__careers-header" id="careers">
+        <div class="ee__careers-header  hidden" id="careers">
             <h2>Want to Work For Eastern Electrical?</h2>
         </div>
         <form id="myForm" class="ee__careers-form" action="https://formspree.io/f/xnqekryv" method="POST">
